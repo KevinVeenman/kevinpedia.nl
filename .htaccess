@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^/?work/([0-9]+)$ /picture.php?id=$1
