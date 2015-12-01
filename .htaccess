@@ -1,2 +1,12 @@
 RewriteEngine on
 RewriteRule ^/?work/([0-9]+)$ /picture.php?id=$1
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+<IfModule mod_deflate.c>
+    <filesMatch "\.(js|css|html|php|less)$">
+        SetOutputFilter DEFLATE
+    </filesMatch>
+</IfModule>
