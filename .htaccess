@@ -12,3 +12,5 @@ Header set Cache-Control "max-age=604800, public"
         SetOutputFilter DEFLATE
     </filesMatch>
 </IfModule>
+
+ErrorDocument 404 /notfound.html
