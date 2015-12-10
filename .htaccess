@@ -1,5 +1,7 @@
 RewriteEngine on
-RewriteRule ^/?work/([0-9]+)$ /picture.php?id=$1
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff)$">
 Header set Cache-Control "max-age=604800, public"
